@@ -1,0 +1,88 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+button[type=submit] {
+    background-color: lightgreen;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}
+
+button[type=submit]:focus {
+    background-color: green;
+}
+
+label {
+    display: block;
+    margin-left: 10px;
+    margin-top: 22px;
+    text-align: left;
+}
+
+select {
+    background: #f1f1f1;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+}
+
+#snackbar {
+    background-color: #333;
+    border-radius: 15px;
+    bottom: 30px;
+    color: white;
+    font-size: 17px;
+    right: 5%;
+    padding: 16px 64px;
+    position: fixed;
+    text-align: center;
+    visibility: hidden;
+}
+
+#snackbar.show {
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    visibility: visible;
+}
+
+.about-section {
+    background-color: #474e5d;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    padding: 30px;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

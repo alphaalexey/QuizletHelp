@@ -1,0 +1,42 @@
+{
+    "manifest_version": 2,
+    "name": "QuizletHelp",
+    "description": "Расширение для получения ответов к тестам Quizlet",
+    "version": "1.0.0",
+    "icons": {
+        "48": "/images/icon48.png",
+        "96": "/images/icon96.png"
+    },
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "quizlet-help@alpha-alex.tk",
+            "strict_min_version": "57.0"
+        }
+    },
+
+    "browser_action": {
+        "browser_style": true,
+        "default_title": "QuizletHelp",
+        "default_popup": "/settings/options.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [ "https://quizlet.com/*/test*" ],
+            "js": [ "/content_script.js" ]
+        }
+    ],
+
+    "web_accessible_resources": [
+        "/inject/inject.js"
+    ],
+
+    "options_ui": {
+        "page": "/settings/options.html"
+    },
+
+    "permissions": [
+        "storage"
+    ]
+}

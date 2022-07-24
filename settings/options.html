@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="options.css">
+    </head>
+    <body>
+        <div class="about-section">
+            <h1>Quizlet helper</h1>
+            <p><b>Made by <a href="https://vk.com/id494258914" rel="nofollow">@alpha_alex</a></b></p>
+        </div>
+        <form>
+            <label for="truefalse_tasks">Вопросы верно-неверно:</label>
+            <select name="truefalse_tasks" id="truefalse_tasks" required>
+                <option value="none">Не трогать</option>
+                <option value="color">Выделить цветом ответ</option>
+                <option value="dot">Точка после правильного ответа</option>
+            </select>
+            <label for="choose_tasks">Вопросы с выбором ответа:</label>
+            <select name="choose_tasks" id="choose_tasks" required>
+                <option value="none">Не трогать</option>
+                <option value="color">Выделить цветом ответ</option>
+                <option value="dot">Точка после правильного ответа</option>
+            </select>
+            <label for="matching_tasks">Вопросы для подбора:</label>
+            <select name="matching_tasks" id="matching_tasks" required>
+                <option value="none">Не трогать</option>
+                <option value="numbers">Добавить номер ответам</option>
+            </select>
+            <label for="write_tasks">Задания для письменного ответа:</label>
+            <select name="write_tasks" id="write_tasks" required>
+                <option value="none">Не трогать</option>
+                <option value="placeholder">Подсказка внутри поля</option>
+                <option value="fill">Вписать ответ</option>
+            </select>
+            <button type="submit">Сохранить</button>
+        </form>
+
+        <div id="snackbar">Сохранено</div>
+
+        <script src="options.js"></script>
+    </body>
+</html>
